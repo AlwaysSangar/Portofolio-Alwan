@@ -59,7 +59,7 @@ export default function Page() {
               <div className="mx-auto mb-6 h-32 w-32 overflow-hidden rounded-full border-4 border-indigo-500/50 shadow-[0_0_20px_rgba(99,102,241,0.5)]">
                 <div className="relative h-full w-full">
                   <Image
-                    src="/me.jpg"
+                    src="/me3.jpg"
                     alt="Foto profil"
                     fill
                     className="object-cover"
