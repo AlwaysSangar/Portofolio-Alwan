@@ -9,10 +9,10 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Project 1 — TokoBunga",
-    desc: "Aplikasi landing page modern dan responsif yang dirancang untuk promosi produk bunga. Fokus pada performa tinggi dan tampilan visual yang estetik untuk menarik minat calon pelanggan.",
+    title: "Project 1 — Gojek",
+    desc: "Aplikasi landing page modern dan responsif yang dirancang untuk promosi Ojek Online dll. Fokus pada performa tinggi dan tampilan visual yang estetik untuk menarik minat calon pelanggan.",
     tech: ["Dart"],
-    image: "/TokoBunga.png",
+    image: "/Gojek.png",
     github: "https://github.com/AlwaysSangar/TokoBunga.git",
   },
   {
