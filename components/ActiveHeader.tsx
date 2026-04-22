@@ -14,7 +14,6 @@ export default function ActiveHeader() {
   const ids = useMemo(() => items.map((i) => i.id), []);
 
   useEffect(() => {
-    const root = document.getElementById("app-scroll"); // scroll container
     const sections = ids
       .map((id) => document.getElementById(id))
       .filter(Boolean) as HTMLElement[];
@@ -23,7 +22,7 @@ export default function ActiveHeader() {
 
     const io = new IntersectionObserver(
       (entries) => {
-        // ambil yang paling dekat ke "atas" (di dalam rootMargin)
+        // pilih section yang paling dekat ke tengah layar
         const visible = entries
           .filter((e) => e.isIntersecting)
           .sort(
@@ -35,9 +34,8 @@ export default function ActiveHeader() {
         if (visible?.target?.id) setActive(visible.target.id);
       },
       {
-        root: root ?? null,
-        // area aktif di sekitar tengah layar (biar pindah tabnya terasa natural)
-        rootMargin: "-45% 0px -50% 0px",
+        root: null, // pakai scroll body
+        rootMargin: "-40% 0px -50% 0px",
         threshold: 0.01,
       }
     );
@@ -56,9 +54,11 @@ export default function ActiveHeader() {
   };
 
   return (
-    <header className="sticky top-0 z-50">
-      <div className="bg-slate-950/55 backdrop-blur-xl">
-        <div className="px-5 pt-4 pb-3">
+    <header className="sticky top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
+        <span className="text-sm font-bold tracking-tight">Portfolio</span>
+
+        <nav className="w-full max-w-md">
           <div className="rounded-full border border-white/10 bg-white/5 p-1 shadow-[0_10px_30px_rgba(0,0,0,0.35)]">
             <div className="relative grid grid-cols-4">
               <span
@@ -81,8 +81,7 @@ export default function ActiveHeader() {
               })}
             </div>
           </div>
-        </div>
-        <div className="h-px bg-white/10" />
+        </nav>
       </div>
     </header>
   );

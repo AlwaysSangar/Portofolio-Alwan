@@ -30,7 +30,14 @@ export const projects: Project[] = [
     github: "https://github.com/AlwaysSangar/TravelApp.git",
   },
   {
-    title: "Project 4 — Kyue",
+    title: "Project 4 — TokoBunga",
+    desc: "Aplikasi Landing page modern yang dirancang khusus untuk meningkatkan konversi penjualan produk bunga. Fokus utama proyek ini adalah pada estetika visual yang bersih dan performa aplikasi yang ringan.",
+    tech: ["Dart"],
+    image: "/TokoBungaMobile.png",
+    github: "https://github.com/AlwaysSangar/TokoBunga.git",
+  },
+  {
+    title: "Project 5 — Kyue",
     desc: "Landing page untuk toko kosmetik yang berfungsi sebagai representasi digital toko. Fokus pada pengenalan brand dan edukasi pelanggan mengenai produk serta layanan yang tersedia di toko tersebut.",
     tech: ["Next Js",],
     image: "/Kyue.png",
